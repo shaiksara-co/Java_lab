@@ -1,4 +1,4 @@
-## additional exps
+![addexp3](https://github.com/user-attachments/assets/b0a851a9-4f59-48d4-9757-338fc144cd6d)## additional exps
 # addexp2
 ## TITLE fibonacci series
 ```
@@ -100,4 +100,46 @@ class SubstringInsert {
 ```
 # OUTPUT
 ![addexp1](https://github.com/user-attachments/assets/c5d2c085-46c3-4cc6-a1f1-3779c4a62756)
+
+# addexp3
+## TITLE palindrome
+```
+import java.util.Scanner;
+
+class Palindrome {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the string: ");
+        String str = sc.nextLine();
+
+        int start = 0;
+        int end = str.length() - 1;
+        boolean flag = true;
+
+        while (start < end) {
+            if (str.charAt(start) != str.charAt(end)) {
+                System.out.println("String is not a palindrome");
+                flag = false;
+                break;
+            }
+            start++;
+            end--;
+        }
+
+        if (flag) {
+            System.out.println("String is a palindrome");
+        }
+
+        sc.close();
+    }
+}
+```
+# output
+![addexp3](https://github.com/user-attachments/assets/616013f4-9809-4b31-a4f8-aba4e9bd7f29)
+
+# addexp4
+## TITLE perfect no or not
+```
+
 
