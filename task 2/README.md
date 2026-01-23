@@ -49,4 +49,29 @@ System.out.println("Result of adding three integers: " + sum3);
 # OUTPUT
 ![task 2b 5as](https://github.com/user-attachments/assets/25a8b736-e50a-493b-b18a-828b9a5b8dc6)
 
-
+## task 2c
+## TITLE: 2c.) java program implement constructor
+## source code
+```
+class Student {
+String name;
+int age;
+int marks;
+Student (String n, int a, int m) {
+name = n;
+age = a;
+marks = m;
+}
+void display ( ) {
+System.out.println ("Name: " + name);
+System.out.println ("Age: " + age);
+System.out.println ("Marks: " + marks);
+}
+public static void main(String[] args) {
+Student S1 = new Student ("Alice", 20, 85);
+S1.display ( );
+}
+}
+```
+# OUTPUT
+![task 2c 5as](https://github.com/user-attachments/assets/c8a7c156-918f-4645-84eb-8ac4ffbb4df7)
