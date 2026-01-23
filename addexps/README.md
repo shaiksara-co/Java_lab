@@ -141,5 +141,34 @@ class Palindrome {
 # addexp4
 ## TITLE perfect no or not
 ```
+import java.util.Scanner;
+
+class Perfect {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the positive number: ");
+        int num = sc.nextInt();
+
+        int sum = 0;
+
+        for (int i = 1; i <= num / 2; i++) {
+            if (num % i == 0) {
+                sum += i;
+            }
+        }
+
+        if (sum == num && num != 0) {
+            System.out.println(num + " is a Perfect Number");
+        } else {
+            System.out.println(num + " is not a Perfect Number");
+        }
+
+        sc.close();
+    }
+}
+```
+# OUTPUT
+![addexp4](https://github.com/user-attachments/assets/52c34474-7f27-4128-83ef-9b72f901b95b)
 
 
