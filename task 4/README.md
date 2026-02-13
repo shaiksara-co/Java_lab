@@ -66,3 +66,128 @@ public class TestEmployee {
 ## output:
 ![java4a](https://github.com/user-attachments/assets/3e974b2c-4788-4bf7-a0ec-d26fc78d3497)
 
+
+# Experiment 4b
+## AIM: To write a JAVA program to implement Single Inheritance.
+```
+// Bicycle.java
+public class Bicycle {
+    String pedalType;
+
+    void showBicycleInfo() {
+        System.out.println("This is a bicycle with pedals.");
+        System.out.println("Pedal Type : " + pedalType);
+    }
+}
+
+
+// Motorbike.java
+public class Motorbike extends Bicycle {
+    int engineCapacity;
+
+    void showMotorbikeInfo() {
+        System.out.println("This motorbike has an engine.");
+        System.out.println("Engine Capacity : " + engineCapacity + " cc");
+    }
+}
+
+// ElectricBike.java
+public class ElectricBike extends Motorbike {
+    int batteryCapacity;
+
+    void showElectricBikeInfo() {
+        System.out.println("This electric bike has an electric motor and battery.");
+        System.out.println("Battery Capacity : " + batteryCapacity + " Wh");
+    }
+}
+
+
+// TestVehicle.java
+public class TestVehicle {
+    public static void main(String[] args) {
+
+        ElectricBike eBike = new ElectricBike();
+
+        eBike.pedalType = "Standard Pedals";
+        eBike.engineCapacity = 150;
+        eBike.batteryCapacity = 500;
+
+        eBike.showBicycleInfo();      // from Bicycle
+        eBike.showMotorbikeInfo();    // from Motorbike
+        eBike.showElectricBikeInfo(); // from ElectricBike
+    }
+}
+```
+
+
+## output:
+![java4b](https://github.com/user-attachments/assets/710486f7-3026-448a-824c-d2e93eec9db8)
+
+
+# experiment 4c
+## AIM: To write a JAVA program to implement Single Inheritance.
+```
+// Figure.java
+abstract class Figure {
+    double dim1;
+    double dim2;
+
+    // Constructor
+    Figure(double dim1, double dim2) {
+        this.dim1 = dim1;
+        this.dim2 = dim2;
+    }
+
+    // Abstract method
+    abstract double area();
+}
+
+// Rectangle.java
+class Rectangle extends Figure {
+
+    // Constructor
+    Rectangle(double length, double breadth) {
+        super(length, breadth);
+    }
+
+    // Implementing abstract method
+    double area() {
+        return dim1 * dim2;
+    }
+}
+
+// Triangle.java
+class Triangle extends Figure {
+
+    // Constructor
+    Triangle(double base, double height) {
+        super(base, height);
+    }
+
+    // Implementing abstract method
+    double area() {
+        return 0.5 * dim1 * dim2;
+    }
+}
+
+
+// TestFigure.java
+public class TestFigure {
+    public static void main(String[] args) {
+
+        Figure f1 = new Rectangle(10, 5);
+        System.out.println("Area of Rectangle = " + f1.area());
+
+        Figure f2 = new Triangle(8, 6);
+        System.out.println("Area of Triangle = " + f2.area());
+    }
+}
+
+```
+
+
+## output:
+![java4c](https://github.com/user-attachments/assets/eaa4166e-3c3f-4a1b-83de-42cedbd1680a)
+
+
+
