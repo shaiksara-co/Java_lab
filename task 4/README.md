@@ -1,9 +1,9 @@
-# Experiment 4a
+## task 4
+# task 4a
 ## AIM: To write a JAVA program to implement Single Inheritance.
+
 ```
-java
-// Person.java
-public class Person {
+class Person {
     String name;
     int age;
 
