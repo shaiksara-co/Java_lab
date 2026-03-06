@@ -1,6 +1,8 @@
- ```
-## Experiment 5a
+
+## task 5
+# task 5a
 ## AIM: To write a JAVA program to implement Interface.
+ ```
 java
 
 // Sortable.java
@@ -93,7 +95,78 @@ public class TestSort {
         sc.close();
     }
 }
-
+```
 
 
 ## output:
+![5a](https://github.com/user-attachments/assets/c5ff772f-bcad-4670-8ecc-5b1b5cc188ed)
+
+
+# task 5b
+## Aim:To write a JAVA program that implements Runtime polymorphism
+```
+ class vehicle {
+
+    void run() {
+        System.out.println("vehicle is running");
+    }
+}
+ class car extends vehicle {
+
+    @Override
+    void run() {
+        System.out.println("car is running on four wheels");
+    }
+}
+ class bike extends vehicle {
+
+    @Override
+    void run() {
+        System.out.println("bike is running on two wheels");
+    }
+}
+ public class testvehicle {
+
+    public static void main(String[] args) {
+
+        vehicle v;   // base class reference
+
+        v = new car();
+        v.run();     // calls car's run()
+
+        v = new bike();
+        v.run();     // calls bike's run()
+
+        v = new vehicle();
+        v.run();     // calls vehicle's run()
+    }
+}
+```
+## output:
+![5b](https://github.com/user-attachments/assets/737026d5-6b90-4bf4-9311-305370049336)
+
+# task 5c
+## Aim: To write a JAVA program using StringBuffer to delete, remove character.
+
+```
+public class StringBufferDelete {
+    public static void main(String[] args) {
+
+        // Create StringBuffer object
+        StringBuffer sb = new StringBuffer("Java Programming");
+
+        // Display original string
+        System.out.println("Original String: " + sb);
+
+        // Delete a single character at index 4
+        sb.deleteCharAt(4);
+        System.out.println("After deleting one character: " + sb);
+
+        // Delete a range of characters from index 0 to 4
+        sb.delete(0, 4);
+        System.out.println("After deleting range of characters: " + sb);
+    }
+}
+```
+## output:
+![5c](https://github.com/user-attachments/assets/f647eeaf-3f88-4306-b4f7-ac3b54c84c88)
